@@ -1,2 +1,2 @@
 # NBK-site
-hum hei sabke maibaap papapapa
+This is my current ongoing project
