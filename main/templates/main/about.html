@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% block title %}About - My College{% endblock %}
+{% block content %}
+<div class="bg-white rounded-xl shadow-md p-8">
+    <h2 class="text-3xl font-bold mb-6 text-blue-800 border-b-2 border-blue-200 pb-2">About Us</h2>
+    <div class="space-y-4 text-gray-700 leading-relaxed">
+        <p>Welcome to My College, a premier institution committed to excellence in education and holistic development of our students.</p>
+        
+        <div class="bg-blue-50 p-6 rounded-lg my-6 border-l-4 border-blue-500">
+            <h3 class="text-xl font-semibold text-blue-700 mb-3">Our Mission</h3>
+            <p>To provide transformative education that empowers students with knowledge, skills, and values to succeed in their careers and contribute meaningfully to society.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-lg font-semibold text-blue-700 mb-2">History</h3>
+                <p>Founded in 1990, we have grown from a small institution to a leading educational hub with state-of-the-art facilities.</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-lg font-semibold text-blue-700 mb-2">Vision</h3>
+                <p>To be recognized nationally as a center of academic excellence and innovation in teaching and research.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

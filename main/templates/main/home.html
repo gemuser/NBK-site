@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block title %}Home - My College{% endblock %}
+{% block content %}
+<div class="mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-blue-800 border-b-2 border-blue-200 pb-2">Latest Notifications</h2>
+    <ul class="space-y-4">
+        {% for note in notifications %}
+        <li class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="font-semibold text-xl text-blue-700 mb-2">{{ note.title }}</h3>
+            <p class="text-gray-600 mb-3">{{ note.content|truncatewords:30 }}</p>
+            {% if note.attachment %}
+            <a href="{{ note.attachment.url }}" class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 transition duration-300">
+                Download Attachment
+            </a>
+            {% endif %}
+        </li>
+        {% empty %}
+        <li class="bg-white p-6 rounded-xl shadow-md text-center text-gray-500">
+            No notifications found.
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
